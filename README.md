@@ -77,8 +77,8 @@ The configuration details of each machine may be found below.
 
 | Name         | Function    | IP Address    | Operating System   |
 |--------------|-------------|---------------|--------------------|
-| Red-Team-Box | Ansible     | 40.88.36.128  | Ubuntu 18.04.5 LTS |
-| Elk-VM       | Monitor     | 20.94.213.188 | Ubuntu 18.04.5 LTS |
+| Red-Team-Box | Ansible     | 10.0.0.4      | Ubuntu 18.04.5 LTS |
+| Elk-VM       | Monitor     | 10.1.0.4      | Ubuntu 18.04.5 LTS |
 | Web-1        | Docker-DVWA | 10.0.0.5      | Ubuntu 18.04.5 LTS |
 | Web-2        | Docker-DVWA | 10.0.0.6      | Ubuntu 18.04.5 LTS |
 | Web-3        | Docker-DVWA | 10.0.0.7      | Ubuntu 18.04.5 LTS |
@@ -88,11 +88,11 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the JumpBox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-Personal IP Address
+  Personal IP Address
 
 Machines within the network can only be accessed by SSH.
 Which machine did you allow to access your ELK VM? What was its IP address?
-The JumpBox from a private IP (10.0.0.4) can connect to the Elk VM (10.1.0.4).
+  The JumpBox from a private IP (10.0.0.4) can connect to the Elk VM (10.1.0.4).
 
 A summary of the access policies in place can be found in the table below.
 
@@ -100,9 +100,9 @@ A summary of the access policies in place can be found in the table below.
 |--------------|---------------------|------------------------|
 | Red-Jump-Box | No                  | Personal IP Only       |
 | Elk-VM       | No                  | 10.0.0.4 & Personal IP |
-| Web-1        | No                  | 10.0.0.4               |
-| Web-2        | No                  | 10.0.0.4               |
-| Web-3        | No                  | 10.0.0.4               |
+| Web-1        | No                  | 10.0.0.1-254           |
+| Web-2        | No                  | 10.0.0.1-254           |
+| Web-3        | No                  | 10.0.0.1-254           |
 
 ### Elk Configuration
 
@@ -111,11 +111,11 @@ What is the main advantage of automating configuration with Ansible?
 There is no chance for human error and it is able to deploy rapidly across mulitple machines. 
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- Installs Docker.io
+In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+- Installs Docker.io 
 - Installs python3-pip
-- Installs Docker module
-- Increases virtual memory
+- Uses pip to install docker
+- Increases virtual memory to run the appropriate container
 - Downloads and launches a docker Elk container
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
