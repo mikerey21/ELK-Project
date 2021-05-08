@@ -61,11 +61,15 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 What aspect of security do load balancers protect? a load balancer defends agaist DDoS attacks. 
-What is the advantage of a jump box? There are so many advantages of a jump box. A few that stand out for me is the abilility to "Lock down" network, applications, internet access and create strong authentication, such as SSH for access. It is morphed into a more locked-down system called Secure Admin Workstation (SAW). 
+What is the advantage of a jump box? There are so many advantages of a jump box. A few that stand out for me is the abilility 
+to "Lock down" network, applications, internet access and create strong authentication, such as SSH for access. 
+It is morphed into a more locked-down system called Secure Admin Workstation (SAW). 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logsand system traffic.  
-What does Filebeat watch for? It waches for log files and locations to are set, collects log events and sends them Elasticsearch or Logstash. 
-What does Metricbeat record? Metricbeat records the metrics and statistics from the operating system and from services running on the server and ships them out to an output specified, such as Elasticsearch. 
+What does Filebeat watch for? It waches for log files and locations to are set, collects log events and sends
+them Elasticsearch or Logstash. 
+What does Metricbeat record? Metricbeat records the metrics and statistics from the operating system and from
+services running on the server and ships them out to an output specified, such as Elasticsearch. 
 
 The configuration details of each machine may be found below.
 
@@ -109,7 +113,7 @@ The playbook implements the following tasks:
 - Install python3-pip
 - Install Docker module
 - Increase virtual memory
-- download and launch a docker elk container
+- Download and launch a docker elk container
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
