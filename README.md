@@ -90,11 +90,13 @@ Machines within the network can only be accessed by _____.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name         | Publicly Accessible | Allowed IP Addresses  |
+|--------------|---------------------|-----------------------|
+| Red-Team-Box | Yes                 | 64.145.76.92          |  
+| Elk-VM       | Yes                 | 64.145.76.92          |  
+| Web-1        | No                  | 10.0.0.5-10.0.255.254 |   
+| Web-2        | No                  | 10.0.0.6-10.0.255.254 |  
+| Web-3        | No                  | 10.0.0.7-10.0.255.254 | 
 
 ### Elk Configuration
 
