@@ -60,10 +60,12 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
-What aspect of security do load balancers protect? a load balancer defends agaist DDoS attacks. 
-What is the advantage of a jump box? There are so many advantages of a jump box. A few that stand out for me is the abilility 
-to "Lock-down" the network, applications, internet access and create strong authentication, such as SSH for access. 
-It is morphed into a more locked-down system called Secure Admin Workstation (SAW). 
+What aspect of security do load balancers protect?
+  A load balancer defends agaist DDoS attacks. 
+What is the advantage of a jump box? 
+  There are so many advantages of a jump box. A few that stand out for me is the abilility 
+  to "Lock-down" the network, applications, internet access and create strong authentication, such as SSH for access. 
+  It is morphed into a more locked-down system called Secure Admin Workstation (SAW). 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logsand system traffic.  
 What does Filebeat watch for? It waches for log files and locations to are set, collects log events and sends
@@ -124,7 +126,9 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- 10.0.0.5
+- 10.0.0.6
+- 10.0.0.7
 
 We have installed the following Beats on these machines:
 - _TODO: Specify which Beats you successfully installed_
