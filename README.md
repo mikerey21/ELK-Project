@@ -62,7 +62,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 What aspect of security do load balancers protect? a load balancer defends agaist DDoS attacks. 
 What is the advantage of a jump box? There are so many advantages of a jump box. A few that stand out for me is the abilility 
-to "Lock down" network, applications, internet access and create strong authentication, such as SSH for access. 
+to "Lock-down" the network, applications, internet access and create strong authentication, such as SSH for access. 
 It is morphed into a more locked-down system called Secure Admin Workstation (SAW). 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logsand system traffic.  
@@ -85,21 +85,22 @@ The configuration details of each machine may be found below.
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the JumpBox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Personal IP Address
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by SSH.
+Which machine did you allow to access your ELK VM? What was its IP address?
+The JumpBox from a private IP (10.0.0.4) can connect to the Elk VM (10.1.0.4).
 
 A summary of the access policies in place can be found in the table below.
 
-| Name         | Publicly Accessible | Allowed IP Addresses  |
-|--------------|---------------------|-----------------------|
-| Red-Team-Box | Yes                 | 64.145.76.92          |  
-| Elk-VM       | Yes                 | 64.145.76.92          |  
-| Web-1        | No                  | 10.0.0.5-10.0.255.254 |   
-| Web-2        | No                  | 10.0.0.6-10.0.255.254 |  
-| Web-3        | No                  | 10.0.0.7-10.0.255.254 | 
+| Name         | Publicly Accessible | Allowed IP Addresses   |
+|--------------|---------------------|------------------------|
+| Red-Jump-Box | No                  | Personal IP Only       |
+| Elk-VM       | No                  | 10.0.0.4 & Personal IP |
+| Web-1        | No                  | 10.0.0.4               |
+| Web-2        | No                  | 10.0.0.4               |
+| Web-3        | No                  | 10.0.0.4               |
 
 ### Elk Configuration
 
