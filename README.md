@@ -120,8 +120,7 @@ The following screenshot displays the result of running `docker ps` after succes
 
 [TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 
-
-
+![image](https://user-images.githubusercontent.com/77562091/117548017-7cbd0280-afe7-11eb-8c42-ecb4f91eaea0.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
