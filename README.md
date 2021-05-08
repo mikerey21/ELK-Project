@@ -46,14 +46,12 @@ These files have been tested and used to generate a live ELK deployment on Azure
         reload: yes
         ~~~
 
-
-
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
-  - Beats in Use
-  - Machines Being Monitored
+- Beats in Use
+- Machines Being Monitored
 - How to Use the Ansible Build
 
 
@@ -61,23 +59,23 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly efficient, in addition to restricting overload of traffic to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
+What aspect of security do load balancers protect? a load balancer defends agaist DDoS attacks. 
+What is the advantage of a jump box? There are so many advantages of a jump box. A few that stand out for me is the abilility to "Lock down" network, applications, internet access and create strong authentication, such as SSH for access. It is morphed into a more locked-down system called Secure Admin Workstation (SAW). 
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logsand system traffic.  
+What does Filebeat watch for? It waches for log files and locations to are set, collects log events and sends them Elasticsearch or Logstash. 
+What does Metricbeat record? Metricbeat records the metrics and statistics from the operating system and from services running on the server and ships them out to an output specified, such as Elasticsearch. 
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name         | Function | IP Address            | Operating System |
-|--------------|----------|-----------------------|------------------|
-| Red-Team-Box | Yes      | 40.88.36.128          | Linux            |
-| Elk-VM       | Monitor  | 20.94.213.188         | Ansible          |
-| Web-1        | No       | 10.0.0.5-10.0.255.254 | Docker           |
-| Web-2        | No       | 10.0.0.6-10.0.255.254 | Docker           |
-| Web-3        | No       | 10.0.0.7-10.0.255.254 | Docker           |
+| Name         | Function    | IP Address    | Operating System   |
+|--------------|-------------|---------------|--------------------|
+| Red-Team-Box | Ansible     | 40.88.36.128  | Ubuntu 18.04.5 LTS |
+| Elk-VM       | Monitor     | 20.94.213.188 | Ubuntu 18.04.5 LTS |
+| Web-1        | Docker-DVWA | 10.0.0.5      | Ubuntu 18.04.5 LTS |
+| Web-2        | Docker-DVWA | 10.0.0.6      | Ubuntu 18.04.5 LTS |
+| Web-3        | Docker-DVWA | 10.0.0.7      | Ubuntu 18.04.5 LTS |
 
 ### Access Policies
 
