@@ -98,7 +98,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name         | Publicly Accessible | Allowed IP Addresses   |
 |--------------|---------------------|------------------------|
-| Red-Jump-Box | No                  | Personal IP Only       |
+| Red-Jump-Box | Yes                 | Personal IP Only       |
 | Elk-VM       | No                  | 10.0.0.4 & Personal IP |
 | Web-1        | No                  | 10.0.0.1-254           |
 | Web-2        | No                  | 10.0.0.1-254           |
@@ -120,9 +120,9 @@ In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Do
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-[TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 
-![image](https://user-images.githubusercontent.com/77562091/117548017-7cbd0280-afe7-11eb-8c42-ecb4f91eaea0.png)
+
+
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -131,10 +131,11 @@ This ELK server is configured to monitor the following machines:
 - 10.0.0.7
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Filebeat and Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat monitors log files, collects log events and forwards them to either Elasticsearch or Logstash for indexing. 
+- Metricbeat detects and logs any changes made from the operating system and from services running on the server. It takes the metrics and statistics collected and ships then to the output specified. 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
